@@ -1,0 +1,11 @@
+<template name="test">
+<h1>firefox & iron router rerendering test</h1>
+	<p><a href="{{getLinkWithHash}}">Click this link to change the hash (should not cause rerendering)</a></p>
+	<p><a href="{{getLinkWithParam}}">Click this link to change a parameter (should not cause rerendering either)</a></p>
+	<div>
+	<h3>Some random strings (click to change hash)</h3>
+	{{#each this}}
+	<div><a href="" class="router-go-link">{{text}}</a></div>
+	{{/each}}
+	</div>
+</template>
